@@ -141,13 +141,33 @@
 	// $loggedIn = false;
 	// echo ($loggedIn) ? "you are logged in" : "please login";
 
-	$age = 5;
-	$score = 20;
-	echo "Your score is: " 
-	.($score > 10 ? 
-	($age > 10 ? "Exceptional" : "Good"):
-	($age < 10 ? "Horrorible": "Average"));
-
+	// $age = 5;
+	// $score = 1;
+	// echo "Your score is: " .
+	// ($score > 10 ? 
+	// 	($age > 10 ? "Exceptional" : "Good"):
+	// 	($age < 10 ? "Horrorible": "Average")
+	// )
+	$loggedIn = false;
+	$arr = [1,2,3,4,5];
 ?>
+<div>
+	<?php if($loggedIn):?>
+		<h1> welcome user </h1>
+	<?php else: ?>
+		<h2>welcome guest</h2>
+	<?php endif; ?>
+</div>
+<div>
+	<?php foreach($arr as $val): ?>
+	<?php echo $val; ?>
+	<?php endforeach; ?>
+</div>
+<div>
+	<?php for ($i=0; $i < 10; $i++): ?>
+		<li><?php $i; ?></i>
+	<?php endfor; ?>
+</div>
+
 </body>
 </html>
