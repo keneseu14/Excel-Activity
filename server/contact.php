@@ -13,8 +13,23 @@
                 $mess = "Please use a valid email";
                 $msgClass ="alert-danger";
             }else{
-               $mess = "Your email has been sent";
-               $msgClass ="alert-danger";
+            //    $mess = "Your email has been sent";
+            //    $msgClass ="alert-danger";
+                #Recipient
+                $toEmail = "kennethmanuelsantiago@gmail.com";
+                #Subject
+                $subject = "You have an email from". $name;
+                $bodyEmail = "<h2>Email Information</h2>
+                    <h4>Name</h4> <p>".$name."</p>
+                    <h4>Email</h4> <p>".$email."</p>
+                    <h4>Message</h4> <p>".$message."</p>";
+                if(mail($toEmail,$subject, $bodyEmail)){
+                    $mess = "Your Email was sent!";
+                    $msgClass = "alert-sucess";
+                }else{
+                    $mess = "Your Email was not sent!";
+                    $msgClass = "alert-danger";
+                }
             }
         }else {
             $mess = "Please fill all fields";
@@ -44,15 +59,15 @@
             <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
                 <div class="form-group">
                     <label>Name</label>
-                    <input type="text" name="name" class="form-control" value="">
+                    <input type="text" name="name" class="form-control" value="<?php echo isset($_POST['name']) ? $name : ''; ?>">
                 </div>
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="text" name="email" class="form-control" value="">
+                    <input type="text" name="email" class="form-control" value="<?php echo isset($_POST['email']) ? $email : ''; ?>">
                 </div>
                 <div class="form-control">
                     <label>Message</label>
-                    <textarea class="form-control" rows="10" cols="10" name="message"></textarea><br>
+                    <textarea class="form-control" rows="10" cols="10" name="message"><?php echo isset($_POST['name']) ? $name : ''; ?></textarea><br>
                     <button type="submit" name="submit" class="btn-primary">Submit</button>
                 </div>
             </form>
