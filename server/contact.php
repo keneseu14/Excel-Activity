@@ -67,7 +67,7 @@
                 </div>
                 <div class="form-control">
                     <label>Message</label>
-                    <textarea class="form-control" rows="10" cols="10" name="message"><?php echo isset($_POST['name']) ? $name : ''; ?></textarea><br>
+                    <textarea class="form-control" rows="10" cols="10" name="message"><?php echo isset($_POST['name']) ? $message : ''; ?></textarea><br>
                     <button type="submit" name="submit" class="btn-primary">Submit</button>
                 </div>
             </form>
