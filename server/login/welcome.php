@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 <body>
-        <nav class="container">
+        <nav>
             <div class="logo">
                 <h4>Welcome <?php echo $name; ?></h4>
             </div>
@@ -38,6 +38,6 @@
         <h5>Firstname: <?php echo $fname; ?> </h5>
         <h5>Lastname: <?php echo $lname; ?></h5>
         <h5>Email: <?php echo $email; ?></h5>
-
-</body>
+        <script src="app.js"></script>
+    </body>
 </html>
