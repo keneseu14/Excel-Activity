@@ -3,11 +3,16 @@
     $mess= "";
     if(isset($_POST['login'])){
         session_start();
-        $_SESSION['user'] = htmlentities($_POST['username']);
-        $_SESSION['pword'] = htmlentities($_POST['password']);
+        $newUsername = $_SESSION['user'];
+        $newPassword = $_SESSION['pword'];
+        $user = $_POST['username'];
+        $pass = $_POST['password'];
         if(!empty($_POST['username']) && !empty($_POST['password'])){
-            if($_SESSION['user'] === $_POST['username'] && $_SESSION['pword'] == $_POST['password']){
+            if($newUsername === $user && $newPassword === $pass){
                 header('Location:welcome.php');
+            }
+            else{
+                $mess = "Please enter a valid username and password!";
             }
         }else {
             $mess= "Please enter a valid username and password!";
