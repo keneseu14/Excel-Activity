@@ -24,8 +24,5 @@ $client = [
     'Remote Port' => $_SERVER['REMOTE_PORT']
     
 ];
-// print_r ($client);
-
-
 
 ?>

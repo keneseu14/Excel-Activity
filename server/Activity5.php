@@ -45,7 +45,8 @@
             <h1>Learner's Profile</h1>
             <div>
                 <label>Firstname:</label>
-                <input type="text" name="fname" value="firstname"> <br>
+                <input type="text" name="fname" value="firstname
+                "> <br>
             </div>
             <div>
                 <label>Lastname:</label>

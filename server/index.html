@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      h1 {
+        color: navy;
+      }
+      p {
+        color: lightcoral;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="demo"></h1>
+    Number 1: <input id="test1" type="text" /> <br />
+    Number 2: <input id="test2" type="text" /><br />
+    <button type="button" onclick="x();">Try it</button> <br />
+    <br />
+    <br />
+    <p id="result"></p>
+    <script>
+      function x() {
+        // document.getElementById("demo").innerHTML = 5 + 6;
+        var x = document.getElementById("test1").value;
+        var y = document.getElementById("test2").value;
+        var z = y + x;
+        document.getElementById("result").innerHTML = document.write(z);
+      }
+    </script>
+  </body>
+</html>

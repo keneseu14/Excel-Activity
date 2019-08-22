@@ -65,7 +65,7 @@
                     <label>Email</label>
                     <input type="text" name="email" class="form-control" value="<?php echo isset($_POST['email']) ? $email : ''; ?>">
                 </div>
-                <div class="form-control">
+                <div class="form-group">
                     <label>Message</label>
                     <textarea class="form-control" rows="10" cols="10" name="message"><?php echo isset($_POST['name']) ? $message : ''; ?></textarea><br>
                     <button type="submit" name="submit" class="btn-primary">Submit</button>
